@@ -6,7 +6,7 @@ from typing import Any
 
 class Queue:
     def __init__(self):
-        ...  # todo для очереди можно использовать python list
+        self.queue = []  # todo для очереди можно использовать python list
 
     def enqueue(self, elem: Any) -> None:
         """
@@ -15,8 +15,8 @@ class Queue:
         :param elem: element to be added
         :return: Nothing
         """
-        print(elem)
-        return None
+        enq_value = self.queue.append(elem)
+        return enq_value
 
     def dequeue(self) -> Any:
         """
@@ -24,7 +24,10 @@ class Queue:
 
         :return: dequeued element
         """
-        return None
+
+        return_value = self.queue[1]
+        del self.queue[1]
+        return return_value
 
     def peek(self, ind: int = 0) -> Any:
         """
@@ -33,8 +36,9 @@ class Queue:
         :param ind: index of element (count from the beginning)
         :return: peeked element
         """
-        print(ind)
-        return None
+        return_value = self.queue[ind]
+
+        return return_value
 
     def clear(self) -> None:
         """
