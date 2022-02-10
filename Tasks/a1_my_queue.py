@@ -15,6 +15,7 @@ class Queue:
         :param elem: element to be added
         :return: Nothing
         """
+
         print(elem)
         return None
 
